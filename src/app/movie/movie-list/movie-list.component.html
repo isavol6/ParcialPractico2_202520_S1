@@ -12,20 +12,45 @@
         <th scope="col">Año</th>
         <th scope="col">Calificación</th>
       </tr>
-      @for(movie of movies; track movie.id) {
 
-      <tr (click)="onSelect(movie)">
-        <td>
-          <b>{{ movie.title }}</b>
-        </td>
-        <td>
-          <img class="poster-img" [src]="movie.posterImageUrl" alt="{{ movie.title }} poster" />
-        </td>
-        <td>{{ movie.director }}</td>
-        <td>{{ movie.releaseYear }}</td>
-        <td>{{ movie.rating }}</td>
+      <div class = container-cards>
+        <div class = cards-row>
+        @for(movie of movies; track movie.id) {
+
+         <tr (click)="onSelect(movie)">
+          <td>
+            <!--Titulo-->
+            <h5 class="card-title">{{ movie.title }}</h5>
+          </td>
+          
+          <!--Info-->
+          <p class="item">
+            <img class="movie-foto" [src]="movie.posterImageUrl"/>
+          </p>
+
+          <p class="item">
+            <span class="label">Rating</span>
+            <span>{{ movie.director }}</span>
+          </p>
+          <p class="item">
+            <span class="label">Rating</span>
+            <span>{{ movie.releaseYear }}</span>
+          </p>
+          <p class="item">
+            <span class="label">Rating</span>
+            <span>{{ movie.rating }}</span>
+          </p>
+
+          <p class="item">
+            <span class = "label">Duracion</span>
+            <span>{{ movie.duration }} mins</span>
+
       </tr>
       }
+    </div>
+  </div>
     </table>
+
+  
   </div>
 </div>

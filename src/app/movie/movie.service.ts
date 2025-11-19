@@ -23,6 +23,10 @@ export class MovieService {
     const url = `${this.baseDetailUrl}${id}`;
     return this.http.get<Movie>(url);
   }
+
+  
+    
+  }
   
   
-}
+

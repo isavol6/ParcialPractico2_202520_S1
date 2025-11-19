@@ -8,6 +8,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpErrorInterceptorService } from './interceptors/http-error-interceptor.service';
 import { MovieModule } from './movie/movie.module';
 
+
 @NgModule({
   declarations: [App],
   imports: [
@@ -18,7 +19,7 @@ import { MovieModule } from './movie/movie.module';
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
     }),
-    MovieModule,
+    MovieModule
   ],
   providers: [
     {

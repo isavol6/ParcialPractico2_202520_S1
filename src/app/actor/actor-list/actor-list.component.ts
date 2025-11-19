@@ -9,5 +9,18 @@ import { Actor } from '../Actor';
 })
 export class ActorListComponent implements OnInit {
   @Input() actors: Actor[] = [];
+  popularidadPromedio: number = 0;
+  
   ngOnInit() {}
+
+  //calcular la popularidad promedio de los actores
+  calcularPopularidad():void{
+    let totalPopularidad = 0;
+    this.actors.forEach(actor => {
+      totalPopularidad += actor.popularity;
+    });
+    this.popularidadPromedio = totalPopularidad / this.actors.length;
+    
+    
+  }
 }
