@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { ToastrModule } from 'ngx-toastr';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { HttpErrorInterceptorService } from './interceptors/http-error-interceptor.service';
 import { MovieModule } from './movie/movie.module';
 
@@ -19,7 +19,8 @@ import { MovieModule } from './movie/movie.module';
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
     }),
-    MovieModule
+    MovieModule,
+    HttpClientModule
   ],
   providers: [
     {

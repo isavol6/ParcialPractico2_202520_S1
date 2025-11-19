@@ -4,7 +4,7 @@ import { MovieListComponent } from './movie/movie-list/movie-list.component';
 
 const routes: Routes = [
   //1. Ruta general
-  {path:'', redirectTo:'/movies', pathMatch:'full'},
+  {path:'', component: MovieListComponent},
 
   //2. Ruta lista
   {path:'movies', component: MovieListComponent},
